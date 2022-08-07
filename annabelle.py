@@ -27,8 +27,9 @@ class Annabelle(Client):
     async def start(self):
         await super().start()
         print(art)
-        logging.info(f"Anabelle with for Pyrogram v{__version__} (Layer {layer}) started")
-        
+        logging.info(f"Anabelle with for Pyrogram v{__version__} (Layer {layer}) started"
+        )        
     async def stop(self, *args):
         await super().stop()
-        logging.info("Anabelle stopped!")
+        logging.info("Anabelle stopped!"
+        )
