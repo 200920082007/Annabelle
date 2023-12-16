@@ -18,9 +18,9 @@ class Annabellee(Client):
 
     def __init__(self):
         super().__init__(
-            SESSION_STRING,
             api_id=API_ID,
             api_hash=API_HASH,
+           session_string=SESSION_STRING,
             plugins={"root": "annabelle/modules"},
         )
 
