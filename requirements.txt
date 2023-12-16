@@ -31,3 +31,4 @@ wikipedia
 wget
 requests
 asyncio
+ytthumb
