@@ -1,5 +1,6 @@
 from Anabelle import Annabelle
 from pyrogram import filters as vrn
+from config import MY_ID, HANDLER
 
 @Annabelle.on_message(vrn.command('setemoji', HANDLER))
 async def setemoji(Annabelle, message):
