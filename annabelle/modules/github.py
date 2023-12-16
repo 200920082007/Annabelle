@@ -22,18 +22,22 @@ async def github(bot:Annabelle, msg:Message) :
               url = data_["html_url"]
               request2 = requests.get(url)
               data = request2.json()
-              await msg.edit_text(text=f"""<p> **__Stdout__**
-**Query** : `{query}`
+              await msg.edit_text(
+    text=f"""
+<b>__Stdout__</b>
+<b>Query</b>: <code>{query}</code>
 
-**ID** : `{data["id"]}`
-**Url** : <a href="{url}"> ʟɪɴᴋ </a>
-**Type** : `{data["type"]}`
-**Name** : `{data["name"]}`
-**Login** : `{data["login"]}`
-**Public Repos** : `{data["public_repos"]}`
-**Following** : `{data["following"]}`
-**Followers** : `{data["followers"]}`
-**Email** : `{data["email"]}`
+<b>ID</b>: <code>{data["id"]}</code>
+<b>Url</b>: <a href="{url}">ʟɪɴᴋ</a>
+<b>Type</b>: <code>{data["type"]}</code>
+<b>Name</b>: <code>{data["name"]}</code>
+<b>Login</b>: <code>{data["login"]}</code>
+<b>Public Repos</b>: <code>{data["public_repos"]}</code>
+<b>Following</b>: <code>{data["following"]}</code>
+<b>Followers</b>: <code>{data["followers"]}</code>
+<b>Email</b>: <code>{data["email"]}</code>
 
-**ANABELLE USERBOT**
-""")
+<b>ANABELLE USERBOT</b>
+""",
+    parse_mode="html"
+)
