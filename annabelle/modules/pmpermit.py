@@ -2,7 +2,7 @@ import asyncio
 from asyncio import sleep
 from pyrogram import filters
 from config import SUDO_USERS, HANDLER
-from Annabelle.database.pmpermit_db import check_permit, add_permit, del_permit
+from annabelle.database.pmpermit_db import check_permit, add_permit, del_permit
 from Anabelle import Annabelle
 PM_PERMIT = False
 
