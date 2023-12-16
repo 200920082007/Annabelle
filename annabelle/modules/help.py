@@ -39,11 +39,11 @@ async def help(client, message: Message):
         else:
             messages.append(tc)
         await message.edit(
-            messages[0], parse_mode="html", disable_web_page_preview=True
+            messages[0], parse_mode="markdown", disable_web_page_preview=True
         )
         messages.pop(0)
         for msg in messages:
-            await message.reply(msg, parse_mode="html", disable_web_page_preview=True)
+            await message.reply(msg, parse_mode="markdown", disable_web_page_preview=True)
     else:
         text = f"<b>Help for <i>{module_name}</i>\n\nUsage:</b>\n"
         found = False
@@ -55,6 +55,6 @@ async def help(client, message: Message):
                     cmd = list(u_cmd.items())[0]
                     text += f"""<code>{HANDLER + cmd[0]}</code> - <i>{cmd[1]}</i>\n"""
         if found:
-            await message.edit(text, parse_mode="html")
+            await message.edit(text, parse_mode="markdown")
         else:
             await message.edit(f"<b>Module <i>{module_name}</i> not found!</b>")
