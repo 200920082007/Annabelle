@@ -9,7 +9,7 @@ from annabelle.modules.helpmenu.help_menu import modules_help
 @Client.on_message(filters.command(["fwdall"], prefixes=f"{HANDLER}") & filters.me)
 async def forward(client: Client, message: Message):
     stat = None if len(message.text.split(" ")) < 2 else message.text.split(" ")[1]
-    if sta is not None:
+    if stat is not None:
         await message.edit("<code>On it...</code>", parse_mode="html")
         try:
             target = await client.get_chat(stat)
