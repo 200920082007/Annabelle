@@ -1,7 +1,5 @@
 from config import HANDLER
-from annabelle import logger
-from Anabelle import Annabelle
-
+from Anabelle import Annabelle, logger
 from pyrogram import filters
 from pyrogram.types import Message
 from pyrogram.errors import ChatAdminRequired, RightForbidden, RPCError
