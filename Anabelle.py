@@ -43,5 +43,5 @@ Annabellee = Client(name="Annabelle", api_id=API_ID, api_hash=API_HASH,
 
 
 
-app = Annabellee()
-app.run()
+
+Annabellee.run()
