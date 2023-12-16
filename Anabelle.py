@@ -17,13 +17,3 @@ art = """
 Annabellee = Client(name="Annabelle", api_id=API_ID, api_hash=API_HASH,
               session_string=SESSION_STRING, plugins={"root": "annabelle/modules"})
 
-
-    async def start(self):
-        await super().start()
-        print(art)
-        logging.info(f"Anabelle with for Pyrogram v{__version__} (Layer {layer}) started"
-        )        
-    async def stop(self, *args):
-        await super().stop()
-        logging.info("Anabelle stopped!"
-        )
