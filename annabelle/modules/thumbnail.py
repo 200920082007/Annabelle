@@ -2,7 +2,7 @@ import ytthumb
 from pyrogram import Client, filters as vrn
 from config import *
 
-@Client.on_message(vrn.command('thumb', prefixes=f"{HANDLER}") & filters.me)
+@Client.on_message(vrn.command('thumb', prefixes=f"{HANDLER}") & vrn.me)
 async def thumb(Client, message):
     try:
         args = message.text.split(None, 1)      
