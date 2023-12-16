@@ -1,13 +1,12 @@
 import pytz
 import asyncio
 import datetime 
-from pyrogram import filters as vrn, Client
+from Anabelle import Annabelle
+from pyrogram import filters as vrn
 from config import MY_ID, HANDLER
 from pyrogram.types.messages_and_media import Message
 
-
-
-@Client.on_message(vrn.command("autobio", HANDLER))
+@Annabelle.on_message(vrn.command("autobio", HANDLER))
 async def autobio(bot:Annabelle, msg:Message) :
     value = msg.text.split(None, 1)
     args = value[1].lower()
