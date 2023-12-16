@@ -1,5 +1,5 @@
 from config import MY_ID, HANDLER
-from annabelle import Annabelle 
+from Anabelle import Annabelle
 from pyrogram import Client
 from pyrogram import filters as vrn
 from pyrogram.types.messages_and_media import Message
