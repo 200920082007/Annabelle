@@ -3,14 +3,13 @@ import requests
 from requests.utils import requote_uri
 from pyrogram import filters as vrn
 from config import HANDLER
-from annabelle import Annabelle 
+from Anabelle import Annabelle
 
 API = "https://api.sumanjay.cf/covid/?country="
 
 @Annabelle.on_message(filters.command("covid", HANDLER))
 async def reply_info(client, message):
     query = message.text.split(None, 1)[1]
-    reply_markup = BUTTONS
     await message.edit(
         text=covid_info(query),
         disable_web_page_preview=True,
@@ -51,7 +50,6 @@ def covid_info(country_name):
 @Annabelle.on_message(vrn.command("corona", HANDELR))
 async def covid(Annabelle, message):
     query = message.text.split(None, 1)[1]
-    reply_markup = BUTTONS
     await message.edit(
         text=covid_info(query),
         disable_web_page_preview=True,
