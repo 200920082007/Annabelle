@@ -26,4 +26,4 @@ echo -e "${white}[ ${red}* ${white}] ${cyan} Instaling pip modules !${reset}\n"
 pip install -r ./Annabelle/requirements.txt
 
 echo "Starting Annabelle!"
-python3 -m Annabelle
+python3 -m annabelle
