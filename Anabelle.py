@@ -2,7 +2,7 @@ from datetime import datetime
 from logging import INFO, WARNING, FileHandler, StreamHandler, basicConfig, getLogger
 from os import path, mkdir
 from sys import stdout
-from pyrogram.types import User # Corrected import statement
+from pyrogram import Client
 from config import *
 
 # Constants Naming Convention
@@ -36,8 +36,14 @@ art = """
         \/     \/     \/     \/    \/     \/               \/ 
 """
 
-Annabelle = User(name="Annabelle", api_id=API_ID, api_hash=API_HASH,
-                  session_string=SESSION_STRING, plugins={"root": "annabelle/modules"})
+# Use the Client class to create an instance
+Annabelle = Client(
+    "Annabelle",
+    api_id=API_ID,
+    api_hash=API_HASH,
+    session_string=SESSION_STRING,
+    plugins={"root": "annabelle/modules"}
+)
 
 logger.info(art)
 
