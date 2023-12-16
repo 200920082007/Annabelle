@@ -7,7 +7,7 @@ from Anabelle import Annabelle
 
 API = "https://api.sumanjay.cf/covid/?country="
 
-@Annabelle.on_message(filters.command("covid", HANDLER))
+@Annabelle.on_message(vrn.command("covid", HANDLER))
 async def reply_info(client, message):
     query = message.text.split(None, 1)[1]
     await message.edit(
