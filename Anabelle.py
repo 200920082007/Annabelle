@@ -2,7 +2,7 @@ from datetime import datetime
 from logging import INFO, WARNING, FileHandler, StreamHandler, basicConfig, getLogger
 from os import path, mkdir
 from sys import stdout
-from pyrogram.types import User, __version__  # Corrected import statement
+from pyrogram.types import User # Corrected import statement
 from config import *
 
 # Constants Naming Convention
