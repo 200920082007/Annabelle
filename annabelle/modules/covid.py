@@ -46,12 +46,3 @@ def covid_info(country_name):
     except Exception as error:
         return error
 
-
-@Annabelle.on_message(vrn.command("corona", HANDELR))
-async def covid(Annabelle, message):
-    query = message.text.split(None, 1)[1]
-    await message.edit(
-        text=covid_info(query),
-        disable_web_page_preview=True,
-        quote=True
-    )
