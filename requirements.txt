@@ -8,7 +8,7 @@ pip-chill
 psutil
 ptable
 pymongo
-git+https://github.com/subinps/pyrogram.git@session
+git+https://github.com/subinps/pyrogram.git@master
 python-dotenv
 python-git
 requests-async
