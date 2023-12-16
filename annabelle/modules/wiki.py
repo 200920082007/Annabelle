@@ -35,5 +35,3 @@ async def wiki(client: Client, message: Message):
 modules_help.append(
     {"wikipedia": [{"wiki [lang] [request]*": "Search in Russian Wikipedia"}]}
 )
-
-requirements_list.append("wikipedia")
