@@ -1,6 +1,6 @@
 from config import HANDLER
 from annabelle import logger
-from annabelle import Annabelle 
+from Anabelle import Annabelle
 
 from pyrogram import filters
 from pyrogram.types import Message
