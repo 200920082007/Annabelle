@@ -2,7 +2,7 @@ import json
 import requests
 from Anabelle import Annabelle 
 from config import MY_ID, HANDLER
-from pyrogram import filters as vrn
+from pyrogram import filters
 from pyrogram.types.messages_and_media import Message
 
 @Annabelle.on_message(filters.command("github", HANDLER))
