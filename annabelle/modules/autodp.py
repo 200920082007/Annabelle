@@ -5,7 +5,7 @@ from config import MY_ID, HANDLER, CHANNEL_ID
 from pyrogram.types.messages_and_media import Message
 
 
-@Annabelle.on_message(filters.command("autodp", HANDLER))
+@Annabelle.on_message(vrn.command("autodp", HANDLER))
 async def autodp(bot:Annabelle, msg:Message) :
     chat_id = CHANNEL_ID
     if msg.from_user.id == MY_ID :
