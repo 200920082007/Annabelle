@@ -2,7 +2,7 @@ import pymongo
 from pymongo import MongoClient
 
 from config import DATABASE_NAME, DATABASE_URL
-from annabelle.database.gmutes_db import  check_gmute, un_gmute
+from annabelle.database.gmute_db import  check_gmute, un_gmute
 
 client = MongoClient(DATABASE_URL)
 mydb = client[DATABASE_NAME]
