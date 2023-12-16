@@ -2,6 +2,8 @@
 
 
 # Copyright Here
+#@vrn_tg
+#@abhisheksvlog - fixer
 
 
 """
@@ -18,19 +20,19 @@ from pyrogram.handlers import MessageHandler
 
 @Client.on_message(filters.command("afk", HANDLER) & filters.me)
 async def afk(client: Client, message):
-	global start, end, handler, reason
-	start = datetime.now().replace(microsecond=0)
-	handler = await client.add_handler(
-            MessageHandler(afk_handler, (filters.private & ~filters.me))
-        )
-        text = message.text.split(None, 1)
-        if len(text) >= 2:
-            reason = text[1]
-            await message.edit(f"I'm going afk\n**reason**: `{reason}`")
-	else:
-	    reason = None
-            await message.edit("I'm going afk")
-            
+    global start, end, handler, reason
+    start = datetime.now().replace(microsecond=0)
+    handler = await client.add_handler(
+        MessageHandler(afk_handler, (filters.private & ~filters.me))
+    )
+    text = message.text.split(None, 1)
+    if len(text) >= 2:
+        reason = text[1]
+        await message.edit(f"I'm going afk\n**reason**: `{reason}`")
+    else:
+        reason = None
+        await message.edit("I'm going afk")
+
             
 @Client.on_message(filters.command("unafk", prefixes=f"{HANDLER}") & filters.me)
 async def unafk(client: Client, message):
