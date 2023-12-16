@@ -1,4 +1,4 @@
-from annabelle import Annabelle 
+from Anabelle import Annabelle
 from pyrogram import filters as vrn
 
 @Annabelle.on_message(vrn.command('group', HANDLER))
