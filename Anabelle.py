@@ -1,4 +1,4 @@
-from pyrogram import Client, __version__
+from pyrogram import User, __version__
 from config import *
 import logging
 from os import path, mkdir
@@ -38,9 +38,10 @@ art = """
 
 """
 
-Annabelle = Client(name="Annabelle", api_id=API_ID, api_hash=API_HASH,
+Annabelle = User(name="Annabelle", api_id=API_ID, api_hash=API_HASH,
               session_string=SESSION_STRING, plugins={"root": "annabelle/modules"})
 
+logger.info(art)
 
 if __name__ == "__main__":
     Annabelle.run()
