@@ -20,7 +20,7 @@ done
 if [ ! -d "./annabelle" ] ; then
 
   echo -e "\n${white}[ ${red}* ${white}] ${cyan} Cloning into Annabelle ${reset}\n"
-  git clone https://github.com/200920082007Annabelle
+  git clone https://github.com/200920082007/Annabelle
 
 echo -e "${white}[ ${red}* ${white}] ${cyan} Instaling pip modules !${reset}\n"
 pip install -r ./Annabelle/requirements.txt
