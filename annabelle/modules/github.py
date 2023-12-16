@@ -6,7 +6,7 @@ from pyrogram import filters as vrn
 from pyrogram.types.messages_and_media import Message
 
 
-@Annabelle.on_message(filters.command("github", HANDLER))
+@Annabelle.on_message(vrn.command("github", HANDLER))
 async def github(bot:Annabelle, msg:Message) :
     if msg.from_user.id == MY_ID :
         args = msg.text.split(None, 1)
