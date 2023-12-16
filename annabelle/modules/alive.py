@@ -1,4 +1,4 @@
-from config import MY_ID
+from config import MY_ID, HANDLER
 from annabelle.helper_funcs.strings import ALIVE_TXT
 from Anabelle import Annabellee
 from pyrogram import filters as vrn
