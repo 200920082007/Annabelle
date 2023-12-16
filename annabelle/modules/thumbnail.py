@@ -1,5 +1,6 @@
 import ytthumb
 from pyrogram import Client, filters as vrn
+from config import *
 
 @Client.on_message(vrn.command('thumb', prefixes=f"{HANDLER}) & filter.me)
 async def thumb(Client, message):
