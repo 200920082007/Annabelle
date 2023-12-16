@@ -14,16 +14,9 @@ art = """
 
 """
 
-class Annabellee(Client):
+Annabellee = Client(name="Annabelle", api_id=API_ID, api_hash=API_HASH,
+              session_string=SESSION_STRING)
 
-    def __init__(self):
-    super().__init__(
-        name="Annabelle",
-        api_id=API_ID,
-        api_hash=API_HASH,
-        session_string=SESSION_STRING,
-        plugins={"root": "annabelle/modules"},
-    )
 
     async def start(self):
         await super().start()
