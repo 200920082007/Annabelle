@@ -1,6 +1,6 @@
 from Anabelle import Annabelle 
-from annabelle.database.gbans import check_gban
-from annabelle.database.gmutes import check_gmute
+from annabelle.database.gban_db import check_gban
+from annabelle.database.gmute_db import check_gmute
 from config import MY_ID
 from pyrogram.types import ChatPermissions
 
