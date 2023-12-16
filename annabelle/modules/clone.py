@@ -1,64 +1,59 @@
 from Anabelle import Annabelle
-from pyrogram import Client
+from pyrogram import Client, filters
 from config import MY_ID, HANDLER
-from pyrogram import filters as vrn
 from pyrogram.types.messages_and_media import Message
 
-
-
 @Annabelle.on_message(filters.command("clone", HANDLER) & filters.me)
-async def clone(bot:Client, msg:Message) :
-    if msg.from_user.id == MY_ID :
-        if msg.chat.type == "group" or msg.chat.type == "supergroup" :
-            try :
+async def clone(bot: Client, msg: Message):
+    if msg.from_user.id == MY_ID:
+        if msg.chat.type == "group" or msg.chat.type == "supergroup":
+            try:
                 user = msg.reply_to_message.from_user
 
-                try :
+                try:
                     pic = await bot.download_media(message=user.photo.big_file_id)
                     await bot.set_profile_photo(photo=pic)
-                except :
-                    print("No profile photo !")
+                except:
+                    print("No profile photo!")
 
                 firstname = user.first_name
 
-                if user.last_name :
+                if user.last_name:
                     lastname = user.last_name
-                else :
+                else:
                     lastname = ""
 
                 await bot.update_profile(first_name=firstname, last_name=lastname)
                 await msg.edit_text(text="`Cloned Successfully !`")
 
-            except :
+            except:
                 await msg.edit_text(text="`Couldnt clone !!`")
 
+        elif msg.chat.type == "private":
+            try:
 
-        elif msg.chat.type == "private" :
-            try :
-
-                try :
+                try:
                     user = msg.chat
-                except :
+                except:
                     user = msg.reply_to_message.from_user
 
-                try :
+                try:
                     pic = user.photo.big_file_id
                     await bot.set_profile_photo(photo=pic)
-                except :
+                except:
                     pic = ""
 
                 firstname = user.first_name
-                
-                if user.last_name :
+
+                if user.last_name:
                     lastname = user.last_name
-                else :
+                else:
                     lastname = ""
 
                 await bot.update_profile(first_name=firstname, last_name=lastname)
 
                 await msg.edit_text(text="**Cloned Successfully !**")
-            except :
+            except:
                 await msg.edit_text(text="**Couldnt Clone !**")
-        else :
-            await msg.edit_text(text=**Couldnt Clone !**")
-
+        else:
+            await msg.edit_text(text="**Couldnt Clone !**")
