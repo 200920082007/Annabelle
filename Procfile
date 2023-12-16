@@ -1,1 +1,1 @@
-worker: python3 annabelle.py
+worker: python3 -m annabelle
