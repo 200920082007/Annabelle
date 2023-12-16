@@ -1,6 +1,6 @@
 import json
 import requests
-from annabelle import Annabelle 
+from Anabelle import Annabelle
 from config import MY_ID, HANDLER
 from pyrogram import filters as vrn
 from pyrogram.types.messages_and_media import Message
@@ -37,8 +37,3 @@ async def github(bot:Annabelle, msg:Message) :
 
 **ANABELLE USERBOT**
 """)
-           except :
-              await msg.edit_text(text=f"**Couldnt find results for** `{query}`")
-        else:
-            await message.edit("`Give a username to search`")
-
