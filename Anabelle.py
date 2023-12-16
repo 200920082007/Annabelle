@@ -42,6 +42,5 @@ Annabellee = Client(name="Annabelle", api_id=API_ID, api_hash=API_HASH,
               session_string=SESSION_STRING, plugins={"root": "annabelle/modules"})
 
 
-
-
-Annabellee.run()
+if __name__ == "__main__":
+    Annabellee.run()
