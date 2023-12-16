@@ -1,4 +1,4 @@
-from annabelle import Annabelle 
+from Anabelle import Annabelle
 from pyrogram import Client
 from config import MY_ID, HANDLER
 from pyrogram import filters as vrn
